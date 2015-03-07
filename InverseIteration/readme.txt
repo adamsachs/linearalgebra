@@ -1,0 +1,9 @@
+Adam Sachs
+ajs2255
+hw5
+
+My program is written in C. It is titled invit.c; it uses c's math library, so in order to compile it, type "gcc invit.c -lm" while in the right directory, in order to link with the math directory; after this, an executable file titled "a.out" will be created, which you can run by typing "./a.out" while in the right directory.
+
+The program hard codes the inverse of the matrix A given in the assignment, using some loops to take advantage of the patterns in the matrix. Then, using a random number generator, the program constructs a random normalized x vector (with 10 components) that it uses as an initial approximation of the eigenvector. The normalized vector is created by picking a random number between -5 and 5 for each component, summing the squares of each component, square-rooting that sum in order to get the magnitude of the vector, and dividing each component by this magnitude. With this initial eigenvector approximation, the program performs 15 iterations of the power method using the inverse of A and the initial approximation of the eigenvector. After the 15th iteration, the program use the most recently computed eigenvector to approximate the eigenvalue. This represents an approximation of the largest eigenvalue for the A inverse matrix. The inverse of this eigenvalue is an approximation of the smallest eigenvalue for the A matrix. The program then return this approximation of the eigenvalue.
+
+The program should 0.081014 as its approximation of the eigenvalue. Using the equation in the assignment, I got the same number to be the smallest eigenvalue of the matrix. Thus, the inverse iteration approximation is accurate after 15 iterations.
